@@ -1,57 +1,48 @@
-# Variables para crear un juego
-WIDTH_MAPA = 30
-HEIGHT_MAPA = 20
-espacio_vacio = "  "
-espacio_lleno = "[ ]"
+# importando el modulo os 
+import os
+from data.datos import lista_menu
+from programas.sumas import sumas2
 
-coordenada_personaje = [4, 10]
-personaje = "😀"
 
-def cargar_mapa(movimiento_personaje):
-    global personaje
+# limpiar la terminal 
+os. system("cls")
+sumar2()
 
-    # Movimiento hacia arriba
-    if movimiento_personaje == "w":
-        if coordenada_personaje[0] > 0:
-            coordenada_personaje[0] -= 1
+estado = True 
 
-    # Movimiento hacia abajo
-    elif movimiento_personaje == "s":
-        if coordenada_personaje[0] < HEIGHT_MAPA - 1:
-            coordenada_personaje[0] += 1
+# bucle depende de la vatiable estado
+while Estado:
+    print("+-----------------------------------+")
+    print(" |JHONATAN                2025 v.1 | ")
+    print("|                                   |")
+    print((typelista_menu))
+    print(f"| [1]: {lista_menu[0]})")
+    print(f"| [1]: {lista_menu[1]})")
+    print(f"| [1]: {lista_menu[2]})")
+    print(f"| [1]: {lista_menu[3]})")
+    print(f"| [1]: {lista_menu[4]})")   
+    print(f"|[0]: salir")
 
-    # Movimiento a la izquierda
-    elif movimiento_personaje == "a":
-        if coordenada_personaje[1] > 0:
-            coordenada_personaje[1] -= 1
 
-    # Movimiento a la derecha
-    elif movimiento_personaje == "d":
-        if coordenada_personaje[1] < WIDTH_MAPA - 1:
-            coordenada_personaje[1] += 1
+# respuera en dato ingresado
+r = int(input("|[?]: "))
 
-# Dibujar el mapa
-    print("+" + "-" * (WIDTH_MAPA * len(espacio_vacio)) + "+")
-    for cada_fila in range(HEIGHT_MAPA):
-        print("|", end="")
-        for cada_bloque in range(WIDTH_MAPA):
-            if coordenada_personaje[0] == cada_fila and coordenada_personaje[1] == cada_bloque:
-                print(f"{personaje}", end="")
-            else:
-                print(espacio_vacio, end="")
-        print("|")
-    print("+" + "-" * (WIDTH_MAPA * len(espacio_vacio)) + "+")
 
-# Código principal del juego
-if _name_ == "_main_":
-    while True:
-        movimiento = input("Mover personaje (w/a/s/d, q para salir): ").lower()
-        if movimiento == "q":
-            print("¡Juego terminado!")
-            break
-        cargar_mapa(movimiento)
+# preugnta si el dato ingresaso des una de las opciones disponibles 
+if r == 0 :
+    estado = False  
+elif r == 1:
+    sumar2()
+
+# limpiar la terminal 
+os. system("cls")
 
 
 
+# codigo fuera del bucle, se ejecuta si el bucle deja ser verdadero 
+print("|[saliendo del programa...]")
 
+
+
+from juego.juegos
 
